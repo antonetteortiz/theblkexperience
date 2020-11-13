@@ -1,0 +1,46 @@
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #020202;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bc925a;
+  text-decoration: none;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.img-container {
+  background-image: url("../Image/mainimg.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5%;
+}
+
+.headline {
+  color: #bc925a;
+}
+
+.img-container div {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  color: #bc925a;
+}
+ 
+.Button {
+  color: #bc925a;
+}

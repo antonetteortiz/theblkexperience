@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/functions.scss';
+@import '~bootstrap/scss/variables.scss';
+
+//$primary: #CAA035;
+//$primary:   #49D949;
+//https://coolors.co/1e212b-49d949-ffc800-ff8427-ffffff
+
+//https://coolors.co/ff8811-ffd168-897700-10c900-00aaff
+$blue:      #00aaff;
+$yellow:    #ffd168;
+$orange:    #ff8811;
+$olive:     #897700;
+$green:     #10c900;
+
+
+
+$theme-colors: map-merge(
+  (
+    "primary":    $green,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    //  "medium":     $medium,
+    "green":      $green,
+    "blue":       $blue,
+    "yellow":     $yellow,
+    "orange":     $orange,
+    "olive":      $olive
+  ),
+  $theme-colors
+);
+
+//  $primary-color:   #10c900;
+$link-color: $green;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
