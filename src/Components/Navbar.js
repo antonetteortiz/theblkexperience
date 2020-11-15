@@ -4,6 +4,9 @@ import { Link, Route, Switch, Redirect } from "react-router-dom";
 function Navbar() {
   return (
     <div>
+      <div className="header">
+        <h4>BLACK LIVES MATTER</h4>
+      </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
           BLK Experience

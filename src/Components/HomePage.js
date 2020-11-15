@@ -13,7 +13,7 @@ function HomePage() {
         <h1 className="headline">You just entered the black experience</h1>
         <div>
           <Link to="/men">
-            <Button size="lg" className="btn btn-green">
+            <Button variant="outline-warning" size="lg" className="Button">
               Shop Men's
             </Button>
           </Link>
