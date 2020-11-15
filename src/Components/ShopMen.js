@@ -21,19 +21,22 @@ function ShopMen(props) {
   let BrandList = props.menBrands.map((shopmen, i) => {
     return (
       <div className="col mb-4">
-        <div className="card" style={{ width: "18rem" }} key={i}>
-          <img src={shopmen.logo} className="card-img-top" alt="..." />
+        <div className="card" style={{ width: "auto", margin: "30px" }} key={i}>
+          <img
+            src="https://pds.exblog.jp/pds/1/201609/18/51/f0044151_165878.jpg"
+            className="img-fluid"
+            alt="Responsive image"
+          />
           <div className="card-body">
-            <h5 className="card-title">{shopmen.brand_name}</h5>
-            <p className="card-text">{shopmen.CEO}</p>
-            {/* <a
-              className="btn btn-primary"
-              href={`/updatebrand/${encodeURI(shopwomen.brand_name)}`}
+            {/* <h5 className="card-title">{shopmen.brand_name}</h5> */}
+            <a
+              className="card-link"
+              href={`/updatebrand/${encodeURI(shopmen.brand_name)}`}
             >
               Update
-            </a> */}
+            </a>
             <a
-              className="btn btn-primary"
+              className="card-link"
               onClick={() => remove(shopmen.brand_name)}
             >
               Delete
@@ -47,7 +50,7 @@ function ShopMen(props) {
   return (
     <div>
       <Navbar />
-      <div className="row row-cols-2 row-cols-md-2">{BrandList}</div>
+      <div className="row row-cols-4 row-cols-md-1">{BrandList}</div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -26,14 +27,25 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Women's
-              </a>
+              <Link to="/women">
+                <a className="nav-link" href="#">
+                  Women's
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Men's
-              </a>
+              <Link to="/men">
+                <a className="nav-link" href="#">
+                  Men's
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/createbrand">
+                <a className="nav-link" href="#">
+                  Create Brand
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

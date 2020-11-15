@@ -4,6 +4,8 @@ import "./App.css";
 import HomePage from "./Components/HomePage";
 import ShopMen from "./Components/ShopMen";
 import ShopWomen from "./Components/ShopWomen";
+import CreateBrands from "./Components/CreateBrands"
+import UpdateBrands from "./Components/UpdateBrands";
 
 function App() {
   // In react hooks this is how we set state
@@ -69,7 +71,7 @@ function App() {
         // exact
         path="/men"
         render={() => {
-          return <ShopMen menBrands={shopmen}/>;
+          return <ShopMen menBrands={shopmen} />;
         }}
       />
 
@@ -78,6 +80,22 @@ function App() {
         path="/women"
         render={() => {
           return <ShopWomen womenBrands={shopwomen} />;
+        }}
+      />
+
+      <Route
+        // exact
+        path="/createbrand"
+        render={() => {
+          return <CreateBrands />;
+        }}
+      />
+
+      <Route
+        exact
+        path="/updatebrand/:brand_name"
+        render={() => {
+          return <UpdateBrands womenBrandList={shopwomen} />;
         }}
       />
 
