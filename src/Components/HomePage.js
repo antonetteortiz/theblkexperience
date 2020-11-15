@@ -10,11 +10,10 @@ function HomePage() {
         <h4>BLACK LIVES MATTER</h4>
       </div>
       <div className="img-container">
-        {/* <img src="https://www.workmodelagency.com/upload/15/08/section-4.jpg" alt="" className="img-fluid"/> */}
         <h1 className="headline">You just entered the black experience</h1>
         <div>
           <Link to="/men">
-            <Button variant="outline-warning" size="lg" className="Button">
+            <Button size="lg" className="btn btn-green">
               Shop Men's
             </Button>
           </Link>

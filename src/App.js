@@ -32,6 +32,29 @@ function App() {
     //Argument passed here is saying everytime our argument changes the API will be called.
   }, []);
 
+ 
+  const [shopmen, setShopMen] = useState([]);
+
+  console.log("in App.js before useEffect");
+  useEffect(() => {
+    console.log(`are we here`);
+    let menapiUrl = "https://sd-womens-fashion.herokuapp.com/menswear";
+    fetch(menapiUrl)
+      .then((data) => {
+        console.log(data);
+        return data.json();
+      })
+      .then((shopmen) => {
+        console.log(shopmen);
+        setShopMen(shopmen);
+      })
+      .catch((error) => {
+        console.log(error);
+        console.log("uh oh");
+      });
+
+  }, []);
+
   return (
     <Switch>
       <Route
@@ -46,7 +69,7 @@ function App() {
         // exact
         path="/men"
         render={() => {
-          return <ShopMen />;
+          return <ShopMen menBrands={shopmen}/>;
         }}
       />
 
