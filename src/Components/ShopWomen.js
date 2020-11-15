@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
 import Navbar from "./Navbar"
 import axios from "axios";
 
@@ -22,7 +23,9 @@ function ShopWomen(props) {
     return (
       <div className="col mb-4">
         <div className="card" style={{ width: "auto", height: "auto", margin: "30px" }} key={i}>
-          <img src={shopwomen.logo} className="img-fluid" alt="..." />
+          <Link to="/shopwomen/:id">
+          <img src={shopwomen.logo} className="img-fluid" alt="..." href={`/updatebrand`} />
+          </Link>
           <div className="card-body">
             {/* <h5 className="card-title">{shopwomen.brand_name}</h5>
             <p className="card-text">{shopwomen.CEO}</p> */}
