@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Route, Switch, Redirect } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import "./HomePage.css";
+import { Button1 } from "../stories/Button";
 
 function HomePage() {
   return (

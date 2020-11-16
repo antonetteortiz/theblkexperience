@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar"
 import axios from "axios";
+import { Button } from "../stories/Button";
 
 function ShopMen(props) {
   const remove = (brand_name) => {
@@ -51,6 +52,7 @@ function ShopMen(props) {
     <div>
       <Navbar />
       <div className="row row-cols-4 row-cols-md-1">{BrandList}</div>
+      <Button label = "Delete" primary = {true} ></Button>
     </div>
   );
 }
