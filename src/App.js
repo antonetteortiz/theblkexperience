@@ -6,6 +6,8 @@ import ShopMen from "./Components/ShopMen";
 import ShopWomen from "./Components/ShopWomen";
 import CreateBrands from "./Components/CreateBrands"
 import UpdateBrands from "./Components/UpdateBrands";
+import WomensProduct from "./Components/WomensBrand";
+import WomensBrand from "./Components/WomensBrand";
 
 function App() {
   // In react hooks this is how we set state
@@ -88,6 +90,14 @@ function App() {
         path="/createbrand"
         render={() => {
           return <CreateBrands />;
+        }}
+      />
+
+      <Route
+        // exact
+        path="/women/brand/:brand_name"
+        render={() => {
+          return <WomensBrand />;
         }}
       />
 

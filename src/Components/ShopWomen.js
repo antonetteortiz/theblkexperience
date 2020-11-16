@@ -19,25 +19,34 @@ function ShopWomen(props) {
     }
     
  console.log(props.womenBrands)
-  let BrandList = props.womenBrands.map((shopwomen, i) => {
+  let BrandList = props.womenBrands.map((brand, i) => {
+  let encodedbrand_name = encodeURI(brand.brand_name);
+
     return (
-      <div className="col mb-4">
-        <div className="card" style={{ width: "auto", height: "auto", margin: "30px" }} key={i}>
-          <Link to="/shopwomen/:id">
-          <img src={shopwomen.logo} className="img-fluid" alt="..." href={`/updatebrand`} />
+      <div className="col-auto mb-4">
+        <div className="card" style={{ width: "40rem" }} key={i}>
+          <Link to={`/women/brand/${encodedbrand_name}`}>
+            <img
+              src={brand.logo}
+              className="card-img-top"
+              alt="..."
+              href={`/updatebrand`}
+            />
           </Link>
-          <div className="card-body">
-            {/* <h5 className="card-title">{shopwomen.brand_name}</h5>
-            <p className="card-text">{shopwomen.CEO}</p> */}
+          {/* <div className="card-body">
+            <h5 className="card-title">{shopwomen.brand_name}</h5>
+            <p className="card-text">{shopwomen.CEO}</p>
+          </div> */}
+          <div className="card-footer">
             <a
               className="card-link"
-              href={`/updatebrand/${encodeURI(shopwomen.brand_name)}`}
+              href={`/updatebrand/${encodeURI(brand.brand_name)}`}
             >
               Update
             </a>
             <a
               className="card-link"
-              onClick={() => remove(shopwomen.brand_name)}
+              onClick={() => remove(brand.brand_name)}
             >
               Delete
             </a>
@@ -51,7 +60,7 @@ function ShopWomen(props) {
   return (
     <div>
       <Navbar />
-      <div className="row row-cols-4 row-cols-md-1">{BrandList}</div>
+      <div className="row row-cols-1 row-cols-md-2">{BrandList}</div>
     </div>
   );
 }
