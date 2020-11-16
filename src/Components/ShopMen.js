@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
 import Navbar from "./Navbar"
 import axios from "axios";
 
@@ -18,27 +19,33 @@ function ShopMen(props) {
     }
     
  console.log(props.menBrands)
-  let BrandList = props.menBrands.map((shopmen, i) => {
+  let BrandList = props.menBrands.map((brand, i) => {
+  let encodedbrand_name = encodeURI(brand.brand_name); 
+
     return (
       <div className="col mb-4">
         <div className="card" style={{ width: "auto", margin: "30px" }} key={i}>
-          <img
-            src="https://pds.exblog.jp/pds/1/201609/18/51/f0044151_165878.jpg"
-            className="img-fluid"
-            alt="Responsive image"
-          />
+          <Link to={`/mwn/brand/${encodedbrand_name}`}>
+            <img
+              src={brand.logo}
+              className="img-fluid"
+              alt="Responsive image"
+              href={`/updatebrand`}
+            />
+          </Link>
+
           <div className="card-body">
             {/* <h5 className="card-title">{shopmen.brand_name}</h5> */}
+            {/* <p className="card-text">{shopmen.CEO}</p> */}
+          </div>
+          <div className="card-footer">
             <a
               className="card-link"
-              href={`/updatebrand/${encodeURI(shopmen.brand_name)}`}
+              href={`/updatebrand/${encodeURI(brand.brand_name)}`}
             >
               Update
             </a>
-            <a
-              className="card-link"
-              onClick={() => remove(shopmen.brand_name)}
-            >
+            <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>
           </div>

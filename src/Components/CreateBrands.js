@@ -70,14 +70,15 @@ function CreateMusic() {
         </div>
 
         <div className="form-group">
-          <label for="exampleInputEmail1">Type</label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+          <label for="exampleFormControlSelect1">Type</label>
+          <select
+            class="form-control"
+            id="exampleFormControlSelect1"
             onChange={(event) => setType(event.target.value)}
           />
+          <option>4</option>
+          <option>5</option>
+          </select>
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>
 
