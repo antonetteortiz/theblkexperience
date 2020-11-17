@@ -1,0 +1,62 @@
+.storybook-subscribe {
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 10px;
+  }
+  .storybook-subscribe:hover {
+    background-color: #bc925a;
+    color: #020202;
+  }
+  .card-link:hover {
+    background-color: #bc925a;
+    color: #020202;
+  }
+  .storybook-subscribe--Womens {
+    color: #bc925a;
+    background-color: #020202;
+  }
+  /* .storybook-subscribe--Mens {
+    color: #bc925a;
+    background-color: #020202;
+  }
+  .storybook-subscribe--Home {
+    color: #bc925a;
+    background-color: #020202;
+  }
+  .storybook-subscribe--Blk {
+    color: #bc925a;
+    background-color: #020202;
+  } */
+  
+  /* .card-link {
+    color: #bc925a;
+    background-color: #020202;
+    padding: 10px;
+  }
+  
+  .navnavbarnavbar-expand-lgnavbar-lightbg-light{
+    color: #bc925a;
+  }
+  
+  
+  .navbar-toggler-icon {
+    color: #bc925a;
+    /* background-color: #020202; */
+
+  
+  
+  /* subscribe {
+  padding: 7px;
+  color: #bc925a;
+  border-radius: none;
+  border: none;
+  background:  transparent;
+  }
+  href{
+    color: #bc925a;
+  } */

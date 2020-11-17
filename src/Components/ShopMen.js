@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "./Navbar"
 import axios from "axios";
 import { Button } from "../stories/Button";
+import { Subscribe } from "../stories/Subscribe";
+import Forms from "../stories/Forms";
 
 function ShopMen(props) {
   const remove = (brand_name) => {
@@ -52,6 +54,14 @@ function ShopMen(props) {
     <div>
       <Navbar />
       <div className="row row-cols-4 row-cols-md-1">{BrandList}</div>
+      <footer>
+        <Forms />
+        <Subscribe
+          className="storybook-subscribe"
+          onClick={() => alert("Thank you for Subscribing")}
+          label="Subscribe"
+        />
+      </footer>
     </div>
   );
 }
