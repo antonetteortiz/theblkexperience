@@ -9,7 +9,7 @@ function Navbar() {
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
-          BLK Experience
+          BLACK Experience
         </a>
         <button
           className="navbar-toggler"
@@ -22,36 +22,36 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="navbarNav1">
           <ul className="navbar-nav">
-            <li className="nav-item active">
+            <button className="nav-item active">
               <Link to="/">
                 <a className="nav-link" href="#">
                   Home <span className="sr-only">(current)</span>
                 </a>
               </Link>
-            </li>
-            <li className="nav-item">
+            </button>
+            <button className="nav-item">
               <Link to="/women">
                 <a className="nav-link" href="#">
                   Women's
                 </a>
               </Link>
-            </li>
-            <li className="nav-item">
+            </button>
+            <button className="nav-item">
               <Link to="/men">
                 <a className="nav-link" href="#">
                   Men's
                 </a>
               </Link>
-            </li>
-            <li className="nav-item">
+            </button>
+            <button className="nav-item">
               <Link to="/createbrand">
                 <a className="nav-link" href="#">
                   Create Brand
                 </a>
               </Link>
-            </li>
+            </button>
           </ul>
         </div>
       </nav>
