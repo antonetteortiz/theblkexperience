@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect, useHistory } from "react-router-dom";
 
 function UpdateBrands() {
   const [logo, setLogo] = useState();
@@ -11,6 +11,7 @@ function UpdateBrands() {
   const [price_point, setPrice_Point] = useState();
   const [link, setLink] = useState();
   const params = useParams();
+  
   useEffect(() => {
     let apiLink;  
     if (params.gender === "menswear") {

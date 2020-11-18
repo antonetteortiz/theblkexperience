@@ -7,8 +7,9 @@ function ViewBrand() {
   const [brand, setBrand] = useState();
   const params = useParams();
   useEffect(() => {
+      console.log(`${params.gender}`)
     let apiLink;
-    if (params.gender === "menswear") {
+    if (params.gender == "men") {
       apiLink = `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
     } else {
       apiLink = `https://sd-womens-fashion.herokuapp.com/WomenFashion/${params.brand_name}`;

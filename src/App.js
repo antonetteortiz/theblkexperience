@@ -69,7 +69,7 @@ function App() {
       />
 
       <Route
-        // exact
+        exact
         path="/men"
         render={() => {
           return <ShopMen menBrands={shopmen} />;
@@ -105,7 +105,7 @@ function App() {
       <Route
       path="/:gender/brand/:brand_name"
       render={() => {
-        return <ViewBrand categories={shopwomen.categories} />
+        return <ViewBrand  />
       }}
       />
 

@@ -1,11 +1,12 @@
 import React from "react";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
+import { Link, Route, Switch, Redirect, useHistory } from "react-router-dom";
 import Navbar from "./Navbar";
 import axios from "axios";
 import Forms from "../stories/Forms";
 import { Subscribe } from "../stories/Subscribe";
 
 function ShopWomen(props) {
+  const history = useHistory();
   const remove = (brand_name) => {
     let encodedbrand_name = encodeURI(brand_name);
     axios
@@ -18,6 +19,8 @@ function ShopWomen(props) {
       .then(function (response) {
         alert("Brand has been deleted!");
         console.log(response);
+        // history.push("/women")
+        window.location.href = `http://localhost:3000/women`;
       });
   };
 
@@ -25,6 +28,7 @@ function ShopWomen(props) {
   let BrandList = props.womenBrands.map((brand, i) => {
     let encodedbrand_name = encodeURI(brand.brand_name);
 
+    console.log(`/women/brand/${encodedbrand_name}`);
     return (
       <div className="col-auto mb-4">
         <div className="card" style={{ width: "40rem" }} key={i}>
@@ -32,13 +36,10 @@ function ShopWomen(props) {
             <img
               src={brand.logo}
               className="card-img-top"
-              alt="..."
+              alt="Responsive image"
             />
           </Link>
-          {/* <div className="card-body">
-            <h5 className="card-title">{shopwomen.brand_name}</h5>
-            <p className="card-text">{shopwomen.CEO}</p>
-          </div> */}
+
           <div className="card-footer">
             <a
               className="card-link"

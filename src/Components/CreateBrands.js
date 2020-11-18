@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
+import { useParams, Redirect, useHistory } from "react-router-dom";
 
 function CreateBrand() {
   const [logo, setLogo] = useState();
@@ -10,6 +11,7 @@ function CreateBrand() {
   const [price_point, setPrice_Point] = useState();
   const [link, setLink] = useState();
   const [gender, setGender] = useState();
+  const history = useHistory();
 
   console.log(`${gender} ${gender == "Men's"} `);
   const submitToApi = () => {
@@ -34,6 +36,14 @@ function CreateBrand() {
       .then(function (response) {
         alert("Thanks for adding to our libary.");
         console.log(response);
+        let shopBrand;
+        if (gender == "Men's") {
+          shopBrand = "men";
+        } else {
+          shopBrand = "women";
+        }
+        // history.push(shopBrand);
+        window.location.href = `http://localhost:3000/${shopBrand}`;
       });
   };
 
@@ -49,6 +59,7 @@ function CreateBrand() {
             onChange={(event) => setGender(event.target.value)}
             value={gender}
           >
+            <option></option>
             <option>Men's</option>
             <option>Women's</option>
           </select>
