@@ -2,18 +2,27 @@ import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar"
 
-function CreateMusic() {
+function CreateBrand() {
   const [logo, setLogo] = useState();
   const [brand_name, setBrand_Name] = useState();
   const [CEO, setCEO] = useState();
   const [type, setType] = useState();
   const [price_point, setPrice_Point] = useState();
   const [link, setLink] = useState();
+  const [gender, setGender] = useState();
 
   const submitToApi = () => {
+    let apiLink;
+
+    if (gender == "Men's") {
+      apiLink = "https://sd-womens-fashion.herokuapp.com/menswear/";
+    } else {
+      apiLink = "https://sd-womens-fashion.herokuapp.com/WomenFashion/";
+    }
+    
     console.log("submitting");
     axios
-      .post("https://sd-womens-fashion.herokuapp.com/WomenFashion", {
+      .post(apiLink, {
         logo,
         brand_name,
         CEO,
@@ -31,6 +40,20 @@ function CreateMusic() {
     <div>
       <Navbar />
       <form>
+        <div className="form-group">
+          <label for="exampleFormControlSelect1">Select Category</label>
+          <select
+            class="form-control"
+            id="exampleFormControlSelect1"
+            onChange={(event) => setGender(event.target.value)}
+          >
+            <option>Men's</option>
+            <option>Women's</option>
+          </select>
+          <small id="emailHelp" className="form-text text-muted"></small>
+        </div>
+
+
         <div className="form-group">
           <label for="exampleInputEmail1">Logo</label>
           <input
@@ -75,9 +98,9 @@ function CreateMusic() {
             class="form-control"
             id="exampleFormControlSelect1"
             onChange={(event) => setType(event.target.value)}
-          />
-          <option>4</option>
-          <option>5</option>
+          >
+            <option>4</option>
+            <option>5</option>
           </select>
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>
@@ -130,4 +153,4 @@ function CreateMusic() {
   );
 }
 
-export default CreateMusic;
+export default CreateBrand;

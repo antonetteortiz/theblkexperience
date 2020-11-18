@@ -1,0 +1,94 @@
+.storybook-button {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 10px;
+}
+.storybook-button:hover {
+  background-color: #bc925a;
+  color: #020202;
+}
+.card-link:hover {
+  background-color: #bc925a;
+  color: #020202;
+}
+.storybook-button--Womens {
+  color: #bc925a;
+  background-color: #020202;
+}
+.storybook-button--Mens {
+  color: #bc925a;
+  background-color: #020202;
+}
+.storybook-button--Home {
+  color: #bc925a;
+  background-color: #020202;
+}
+.storybook-button--Blk {
+  color: #bc925a;
+  background-color: #020202;
+}
+
+.card-link {
+  color: #bc925a;
+  background-color: #020202;
+  padding: 10px;
+}
+
+.navnavbarnavbar-expand-lgnavbar-lightbg-light{
+  color: #bc925a;
+}
+
+
+.navbar-toggler-icon {
+  color: #bc925a;
+  /* background-color: #020202; */
+}
+
+.collapse navbar-collapse {
+  color: #bc925a;
+  /* background-color: #020202; */
+}
+.nav-itemactive {
+  color: #bc925a;
+  /* background-color: #020202; */
+}
+.nav-link {
+  color: #bc925a;
+  font-size: 15px;
+  /* background-color: #020202; */
+}
+.sr-only {
+  color: #bc925a;
+  /* background-color: #020202; */
+}
+.nav-item {
+  color: #bc925a;
+  /* background-color: #020202; */
+}
+
+#navbarNav1 {
+  color: #bc925a;
+  /* background-color: #020202; */
+}
+ul {
+  color: #bc925a;
+}
+.navbar-brand{
+  color: #bc925a; 
+}
+
+button {
+padding: 7px;
+color: #bc925a;
+border-radius: none;
+border: none;
+background:  transparent;
+}
+href{
+  color: #bc925a;
+}

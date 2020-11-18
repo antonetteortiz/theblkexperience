@@ -1,0 +1,54 @@
+.p-textinput {
+    height: 50px;
+    width: 180px;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-top: 100px;
+    /* margin-left: 20px; */
+}
+  /* .p-textinput:hover {
+    outline: thin solid #bc925a;
+  }  */
+  .textinput {
+    margin-top: 2px;
+    height: 100%;
+    width: 93%;
+    padding: 0 5px;
+    font-size: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* border: 1px solid #bc925a; */
+  }
+  .textinput-small {
+    height: 40px;
+    width: 170px;
+    font-size: 0.9em;
+  }
+  .textinput-small input {
+    font-size: 0.9em;
+  }
+  .textinput-large {
+    height: 60px;
+    width: 190px;
+    font-size: 1.1em;
+  }
+  .textinput-large input {
+    font-size: 1.1em;
+  } 
+
+footer{
+    margin-left: 50px
+}
+
+  /* .logo{
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 10px;
+  }
+   */

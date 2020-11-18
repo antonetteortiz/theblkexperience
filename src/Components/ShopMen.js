@@ -2,6 +2,9 @@ import React from "react";
 import { Link, Route, Switch, Redirect } from "react-router-dom";
 import Navbar from "./Navbar"
 import axios from "axios";
+import { Button } from "../stories/Button";
+import { Subscribe } from "../stories/Subscribe";
+import Forms from "../stories/Forms";
 
 function ShopMen(props) {
   const remove = (brand_name) => {
@@ -25,7 +28,7 @@ function ShopMen(props) {
     return (
       <div className="col mb-4">
         <div className="card" style={{ width: "auto", margin: "30px" }} key={i}>
-          <Link to={`/mwn/brand/${encodedbrand_name}`}>
+          <Link to={`/men/brand/${encodedbrand_name}`}>
             <img
               src={brand.logo}
               className="img-fluid"
@@ -41,7 +44,7 @@ function ShopMen(props) {
           <div className="card-footer">
             <a
               className="card-link"
-              href={`/updatebrand/${encodeURI(brand.brand_name)}`}
+              href={`/updatebrand/menswear/${encodeURI(brand.brand_name)}`}
             >
               Update
             </a>
@@ -58,6 +61,14 @@ function ShopMen(props) {
     <div>
       <Navbar />
       <div className="row row-cols-4 row-cols-md-1">{BrandList}</div>
+      <footer>
+        <Forms />
+        <Subscribe
+          className="storybook-subscribe"
+          onClick={() => alert("Thank you for Subscribing")}
+          label="Subscribe"
+        />
+      </footer>
     </div>
   );
 }
