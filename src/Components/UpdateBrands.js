@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect, useHistory } from "react-router-dom";
+
 function UpdateBrands() {
   const [logo, setLogo] = useState();
   const [brand_name, setBrand_Name] = useState();
@@ -10,32 +11,46 @@ function UpdateBrands() {
   const [price_point, setPrice_Point] = useState();
   const [link, setLink] = useState();
   const params = useParams();
+  
   useEffect(() => {
-    let apiUrl = `https://sd-womens-fashion.herokuapp.com/WomenFashion/${params.brand_name}`;
-    fetch(apiUrl)
+    let apiLink;  
+    if (params.gender === "menswear") {
+      apiLink =
+        `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
+    } else {
+      apiLink =
+        `https://sd-womens-fashion.herokuapp.com/WomenFashion/${params.brand_name}`;
+    }
+  
+    fetch(apiLink)
       .then((data) => {
         let test = data.json();
         console.log(test);
         return test;
       })
-      .then((shopwomen) => {
-        if (shopwomen) {
-          console.log(shopwomen);
-          setLogo(shopwomen.logo);
-          setBrand_Name(shopwomen.brand_name);
-          setCEO(shopwomen.CEO);
-          setType(shopwomen.type);
-          setPrice_Point(shopwomen.price_point);
-          setLink(shopwomen.link);
+      .then((Brand) => {
+        if (Brand) {
+          console.log(Brand);
+          setLogo(Brand.logo);
+          setBrand_Name(Brand.brand_name);
+          setCEO(Brand.CEO);
+          setType(Brand.type);
+          setPrice_Point(Brand.price_point);
+          setLink(Brand.link);
         }
       });
     //Passing params in brackets will cause function to run again when any of the values of the array changes.
   }, []);
   const submitToApi = () => {
+    let apiLink;
+    if (params.gender === "menswear") {
+      apiLink = `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
+    } else {
+      apiLink = `https://sd-womens-fashion.herokuapp.com/WomenFashion/brand_name/${params.brand_name}`;
+    }
     console.log("update", params.artistName);
     axios
-      .put(
-        `https://sd-womens-fashion.herokuapp.com/WomenFashion/${params.brand_name}`,
+      .put( apiLink,
         {
           logo,
           brand_name,
@@ -46,9 +61,10 @@ function UpdateBrands() {
         }
       )
       .then(function (response) {
+      
         if (response.status == 200) {
           // change when deploying
-          window.location.href = "http://localhost:3000/";
+          window.location.href = `http://localhost:3000/${ params.gender == "menswear" ? 'men' : 'women'}`;
         }
         // alert("Thanks for updating to our libary.");
         console.log(response);

@@ -8,6 +8,7 @@ import { Delete } from "../stories/Delete";
 import { Update } from "../stories/Update";
 
 function ShopMen(props) {
+  const history = useHistory();
   const remove = (brand_name) => {
     let encodedbrand_name = encodeURI(brand_name);
     axios
