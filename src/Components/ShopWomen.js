@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import axios from "axios";
 import Forms from "../stories/Forms";
 import { Subscribe } from "../stories/Subscribe";
+import { Delete } from "../stories/Delete";
+import { Update } from "../stories/Update";
 
 function ShopWomen(props) {
   const remove = (brand_name) => {
@@ -40,16 +42,15 @@ function ShopWomen(props) {
             <h5 className="card-title">{shopwomen.brand_name}</h5>
             <p className="card-text">{shopwomen.CEO}</p>
           </div> */}
-          <div className="card-footer">
-            <a
-              className="card-link"
-              href={`/updatebrand/${encodeURI(brand.brand_name)}`}
-            >
-              Update
+          <div className="storybook-Delete">
+            <a href={`/updatebrand/${encodeURI(brand.brand_name)}`}>
+              <Update className="storybook-Update" label="Update" />
             </a>
-            <a className="card-link" onClick={() => remove(brand.brand_name)}>
-              Delete
-            </a>
+            <Delete
+              className="storybook-delete"
+              onClick={() => remove(brand.brand_name)}
+              label="Delete"
+            />
           </div>
         </div>
       </div>

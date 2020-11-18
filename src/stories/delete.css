@@ -1,0 +1,22 @@
+.storybook-delete {
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 10px;
+  }
+  .storybook-delete:hover {
+    background-color: #bc925a;
+    color: #020202;
+  }
+  .card-link:hover {
+    background-color: #bc925a;
+    color: #020202;
+  }
+  .storybook-delete--Womens {
+    color: #bc925a;
+    background-color: #020202;
+  }

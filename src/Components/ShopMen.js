@@ -1,26 +1,29 @@
 import React from "react";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 import axios from "axios";
 import { Button } from "../stories/Button";
 import { Subscribe } from "../stories/Subscribe";
 import Forms from "../stories/Forms";
+import { Delete } from "../stories/Delete";
+import { Update } from "../stories/Update";
 
 function ShopMen(props) {
   const remove = (brand_name) => {
-        let encodedbrand_name = encodeURI(brand_name)
-        axios
-          .delete(`https://sd-womens-fashion.herokuapp.com/menswear/${encodedbrand_name}`,
-            {
-              brand_name,
-            }
-          )
-          .then(function (response) {
-            alert("Brand has been deleted!");
-            console.log(response);
-          });
-    }
-    
- console.log(props.menBrands)
+    let encodedbrand_name = encodeURI(brand_name);
+    axios
+      .delete(
+        `https://sd-womens-fashion.herokuapp.com/menswear/${encodedbrand_name}`,
+        {
+          brand_name,
+        }
+      )
+      .then(function (response) {
+        alert("Brand has been deleted!");
+        console.log(response);
+      });
+  };
+
+  console.log(props.menBrands);
   let BrandList = props.menBrands.map((shopmen, i) => {
     return (
       <div className="col mb-4">
@@ -30,20 +33,15 @@ function ShopMen(props) {
             className="img-fluid"
             alt="Responsive image"
           />
-          <div className="card-body">
-            {/* <h5 className="card-title">{shopmen.brand_name}</h5> */}
-            <a
-              className="card-link"
-              href={`/updatebrand/${encodeURI(shopmen.brand_name)}`}
-            >
-              Update
+          <div className="storybook-Delete">
+            <a href={`/updatebrand/${encodeURI(brand.brand_name)}`}>
+              <Update className="storybook-Update" label="Update" />
             </a>
-            <a
-              className="card-link"
-              onClick={() => remove(shopmen.brand_name)}
-            >
-              Delete
-            </a>
+            <Delete
+              className="storybook-delete"
+              onClick={() => remove(brand.brand_name)}
+              label="Delete"
+            />
           </div>
         </div>
       </div>
