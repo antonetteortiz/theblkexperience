@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 function CreateBrand() {
   const [logo, setLogo] = useState();
@@ -11,6 +11,7 @@ function CreateBrand() {
   const [link, setLink] = useState();
   const [gender, setGender] = useState();
 
+  console.log(`${gender} ${gender == "Men's"} `);
   const submitToApi = () => {
     let apiLink;
 
@@ -19,7 +20,7 @@ function CreateBrand() {
     } else {
       apiLink = "https://sd-womens-fashion.herokuapp.com/WomenFashion/";
     }
-    
+
     console.log("submitting");
     axios
       .post(apiLink, {
@@ -46,13 +47,13 @@ function CreateBrand() {
             class="form-control"
             id="exampleFormControlSelect1"
             onChange={(event) => setGender(event.target.value)}
+            value={gender}
           >
             <option>Men's</option>
             <option>Women's</option>
           </select>
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>
-
 
         <div className="form-group">
           <label for="exampleInputEmail1">Logo</label>
