@@ -6,8 +6,7 @@ import ShopMen from "./Components/ShopMen";
 import ShopWomen from "./Components/ShopWomen";
 import CreateBrands from "./Components/CreateBrands"
 import UpdateBrands from "./Components/UpdateBrands";
-import WomensProduct from "./Components/WomensBrand";
-import WomensBrand from "./Components/WomensBrand";
+import ViewBrand from "./Components/ViewBrand";
 
 function App() {
   // In react hooks this is how we set state
@@ -70,7 +69,7 @@ function App() {
       />
 
       <Route
-        // exact
+        exact
         path="/men"
         render={() => {
           return <ShopMen menBrands={shopmen} />;
@@ -93,34 +92,35 @@ function App() {
         }}
       />
 
-      <Route
-        // exact
-        path="/women/brand/:brand_name"
-        render={() => {
-          return <WomensBrand />;
-        }}
-      />
+    
 
       <Route
         exact
-        path="/updatebrand/:brand_name"
+        path="/updatebrand/:gender/:brand_name"
         render={() => {
-          return <UpdateBrands womenBrandList={shopwomen} />;
+          return <UpdateBrands   />;
         }}
       />
 
-      {/* {shopwomen.length !== 0 ? (
-        <Route
-          exact
-          path="/shopwomen/:id"
-          render={(routerProps) => {
-            let shopwomen = shopwomen.filter(
-              (shopwomen) => shopwomen.id == routerProps.match.params.id
-            );
-            return <ShopWomen womenBrands={shopwomen} />;
-          }}
-        />
-      ) : null} */}
+      <Route
+      path="/:gender/brand/:brand_name"
+      render={() => {
+        return <ViewBrand  />
+      }}
+      />
+
+      // {/* {shopwomen.length !== 0 ? (
+      //   <Route
+      //     exact
+      //     path="/shopwomen/:id"
+      //     render={(routerProps) => {
+      //       let shopwomen = shopwomen.filter(
+      //         (shopwomen) => shopwomen.id == routerProps.match.params.id
+      //       );
+      //       return <ShopWomen womenBrands={shopwomen} />;
+      //     }}
+      //   />
+      // ) : null} */}
     </Switch>
   );
 }

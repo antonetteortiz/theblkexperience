@@ -1,27 +1,34 @@
 import React from "react";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
-import Navbar from "./Navbar"
+import { Link, Route, Switch, Redirect, useHistory } from "react-router-dom";
+import Navbar from "./Navbar";
 import axios from "axios";
+import Forms from "../stories/Forms";
+import { Subscribe } from "../stories/Subscribe";
 
 function ShopWomen(props) {
+  const history = useHistory();
   const remove = (brand_name) => {
-        let encodedbrand_name = encodeURI(brand_name)
-        axios
-          .delete(`https://sd-womens-fashion.herokuapp.com/WomenFashion/${encodedbrand_name}`,
-            {
-              brand_name
-            }
-          )
-          .then(function (response) {
-            alert("Brand has been deleted!");
-            console.log(response);
-          });
-    }
-    
- console.log(props.womenBrands)
-  let BrandList = props.womenBrands.map((brand, i) => {
-  let encodedbrand_name = encodeURI(brand.brand_name);
+    let encodedbrand_name = encodeURI(brand_name);
+    axios
+      .delete(
+        `https://sd-womens-fashion.herokuapp.com/WomenFashion/${encodedbrand_name}`,
+        {
+          brand_name,
+        }
+      )
+      .then(function (response) {
+        alert("Brand has been deleted!");
+        console.log(response);
+        // history.push("/women")
+        window.location.href = `http://localhost:3000/women`;
+      });
+  };
 
+  console.log(props.womenBrands);
+  let BrandList = props.womenBrands.map((brand, i) => {
+    let encodedbrand_name = encodeURI(brand.brand_name);
+
+    console.log(`/women/brand/${encodedbrand_name}`);
     return (
       <div className="col-auto mb-4">
         <div className="card" style={{ width: "40rem" }} key={i}>
@@ -29,25 +36,18 @@ function ShopWomen(props) {
             <img
               src={brand.logo}
               className="card-img-top"
-              alt="..."
-              href={`/updatebrand`}
+              alt="Responsive image"
             />
           </Link>
-          {/* <div className="card-body">
-            <h5 className="card-title">{shopwomen.brand_name}</h5>
-            <p className="card-text">{shopwomen.CEO}</p>
-          </div> */}
+
           <div className="card-footer">
             <a
               className="card-link"
-              href={`/updatebrand/${encodeURI(brand.brand_name)}`}
+              href={`/updatebrand/WomenFashion/${encodeURI(brand.brand_name)}`}
             >
               Update
             </a>
-            <a
-              className="card-link"
-              onClick={() => remove(brand.brand_name)}
-            >
+            <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>
           </div>
@@ -56,11 +56,18 @@ function ShopWomen(props) {
     );
   });
 
-
   return (
     <div>
       <Navbar />
       <div className="row row-cols-1 row-cols-md-2">{BrandList}</div>
+      <footer>
+        <Forms />
+        <Subscribe
+          className="storybook-subscribe"
+          onClick={() => alert("Thank you for Subscribing")}
+          label="Subscribe"
+        />
+      </footer>
     </div>
   );
 }
