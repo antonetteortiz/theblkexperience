@@ -42,8 +42,8 @@ function CreateBrand() {
         } else {
           shopBrand = "women";
         }
-        // history.push(shopBrand);
-        window.location.href = `https://antonetteortiz.github.io/${shopBrand}`;
+        history.push(`/${shopBrand}`);
+        // window.location.href = `https://antonetteortiz.github.io/${shopBrand}`;
       });
   };
 
