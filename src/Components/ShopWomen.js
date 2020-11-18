@@ -30,8 +30,8 @@ function ShopWomen(props) {
 
     console.log(`/women/brand/${encodedbrand_name}`);
     return (
-      <div className="col-auto mb-4">
-        <div className="card" style={{ width: "40rem" }} key={i}>
+      <div className="col mb-4">
+        <div className="card" style={{ width: "40rem", margin: "30px", padding: "20px, 0px, 0px, 50px"}} key={i}>
           <Link to={`/women/brand/${encodedbrand_name}`}>
             <img
               src={brand.logo}
