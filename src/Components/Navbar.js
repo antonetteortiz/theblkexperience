@@ -12,7 +12,7 @@ function Navbar() {
         style={{ backgroundColor: "#bc925a"}}
       >
         <a className="navbar-brand" href="#">
-          BLACK Experience
+          BLK Experience
         </a>
         <button
           className="navbar-toggler"
