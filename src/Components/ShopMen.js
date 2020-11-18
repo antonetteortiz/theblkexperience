@@ -42,12 +42,11 @@ function ShopMen(props) {
           </Link>
 
           <div className="card-footer" style={{backgroundColor: "#020202"}}>
-            <a
-              className="card-link"
-              href={`/updatebrand/menswear/${encodeURI(brand.brand_name)}`}
+            <Link to ={`/updatebrand/menswear/${encodeURI(brand.brand_name)}`}
             >
               Update
-            </a>
+            </Link>
+            
             <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>

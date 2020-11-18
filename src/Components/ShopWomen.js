@@ -19,7 +19,7 @@ function ShopWomen(props) {
       .then(function (response) {
         alert("Brand has been deleted!");
         console.log(response);
-        // history.push("/women")
+        // history.push(`/women`)
         window.location.href = `https://antonetteortiz.github.io/women`;
       });
   };
@@ -41,12 +41,11 @@ function ShopWomen(props) {
           </Link>
 
           <div className="card-footer" style={{ backgroundColor: "#020202" }}>
-            <a
-              className="card-link"
-              href={`/updatebrand/WomenFashion/${encodeURI(brand.brand_name)}`}
+            <Link to = {`/updatebrand/WomenFashion/${encodeURI(brand.brand_name)}`}
             >
               Update
-            </a>
+            </Link>
+            
             <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>

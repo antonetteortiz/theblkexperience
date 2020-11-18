@@ -41,7 +41,7 @@ function UpdateBrands() {
   }, []);
   const submitToApi = () => {
     let apiLink;
-    if (params.gender === "menswear") {
+    if (params.gender == "menswear") {
       apiLink = `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
     } else {
       apiLink = `https://sd-womens-fashion.herokuapp.com/WomenFashion/brand_name/${params.brand_name}`;
