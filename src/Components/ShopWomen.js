@@ -4,8 +4,6 @@ import Navbar from "./Navbar";
 import axios from "axios";
 import Forms from "../stories/Forms";
 import { Subscribe } from "../stories/Subscribe";
-import { Delete } from "../stories/Delete";
-import { Update } from "../stories/Update";
 
 function ShopWomen(props) {
   const history = useHistory();
@@ -41,19 +39,17 @@ function ShopWomen(props) {
               alt="Responsive image"
             />
           </Link>
-          {/* <div className="card-body">
-            <h5 className="card-title">{shopwomen.brand_name}</h5>
-            <p className="card-text">{shopwomen.CEO}</p>
-          </div> */}
-          <div className="storybook-Delete" style={{backgroundColor: "black"}}>
-            <a href={`/updatebrand/${encodeURI(brand.brand_name)}`}>
-              <Update className="storybook-Update" label="Update" />
+
+          <div className="card-footer" style={{ backgroundColor: "#020202" }}>
+            <a
+              className="card-link"
+              href={`/updatebrand/WomenFashion/${encodeURI(brand.brand_name)}`}
+            >
+              Update
             </a>
-            <Delete
-              className="storybook-delete"
-              onClick={() => remove(brand.brand_name)}
-              label="Delete"
-            />
+            <a className="card-link" onClick={() => remove(brand.brand_name)}>
+              Delete
+            </a>
           </div>
         </div>
       </div>

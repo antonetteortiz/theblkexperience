@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import { useParams, Redirect } from "react-router-dom";
+import "./ViewBrand.css"
 
 function ViewBrand() {
   const [brand, setBrand] = useState();
@@ -40,10 +41,17 @@ function ViewBrand() {
     let ProductList = products.map((product, a) => {
       // Each product as a card
       return (
-        <div>
-          <div class="card" style={{ width: "18rem" }} key={i}>
+        <div style={{ padding: "25px 0px" }}>
+          <div
+            class="card"
+            style={{ width: "18rem", borderColor: "#bc925a" }}
+            key={i}
+          >
             <img src={product.image_url} class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div
+              class="card-body"
+              style={{ backgroundColor: "#020202", minHeight: "500px" }}
+            >
               <h5 class="card-title">{product.name}</h5>
               <p class="card-text">{product.details}</p>
             </div>
@@ -65,8 +73,10 @@ function ViewBrand() {
     <div>
       <div>
         <Navbar />
-        <h1>{brand.brand_name}</h1>
-        {CategoryList}
+        <div className="viewBrand">
+          <h1>{brand.brand_name}</h1>
+          {CategoryList}
+        </div>
       </div>
     </div>
   );

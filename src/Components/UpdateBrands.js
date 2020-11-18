@@ -84,6 +84,11 @@ function UpdateBrands() {
               aria-describedby="emailHelp"
               value={logo}
               onChange={(event) => setLogo(event.target.value)}
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <small id="emailHelp" className="form-text text-muted"></small>
           </div>
@@ -96,6 +101,11 @@ function UpdateBrands() {
               aria-describedby="emailHelp"
               value={brand_name}
               onChange={(event) => setBrand_Name(event.target.value)}
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <small id="emailHelp" className="form-text text-muted"></small>
           </div>
@@ -108,6 +118,11 @@ function UpdateBrands() {
               aria-describedby="emailHelp"
               value={CEO}
               onChange={(event) => setCEO(event.target.value)}
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <small id="emailHelp" className="form-text text-muted"></small>
           </div>
@@ -120,6 +135,11 @@ function UpdateBrands() {
               aria-describedby="emailHelp"
               value={type}
               onChange={(event) => setType(event.target.value)}
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <small id="emailHelp" className="form-text text-muted"></small>
           </div>
@@ -132,6 +152,11 @@ function UpdateBrands() {
               aria-describedby="emailHelp"
               value={price_point}
               onChange={(event) => setPrice_Point(event.target.value)}
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <small id="emailHelp" className="form-text text-muted"></small>
           </div>
@@ -144,6 +169,11 @@ function UpdateBrands() {
               aria-describedby="emailHelp"
               value={link}
               onChange={(event) => setLink(event.target.value)}
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <small id="emailHelp" className="form-text text-muted"></small>
           </div>
@@ -152,6 +182,11 @@ function UpdateBrands() {
               type="checkbox"
               className="form-check-input"
               id="exampleCheck1"
+              style={{
+                backgroundColor: "black",
+                color: "#bc925a",
+                borderColor: "#bc925a",
+              }}
             />
             <label className="form-check-label" for="exampleCheck1">
               Update Brand
@@ -161,6 +196,11 @@ function UpdateBrands() {
             type="button"
             className="btn btn-primary"
             onClick={() => submitToApi()}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           >
             Submit
           </button>

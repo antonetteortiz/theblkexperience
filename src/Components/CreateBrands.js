@@ -58,6 +58,11 @@ function CreateBrand() {
             id="exampleFormControlSelect1"
             onChange={(event) => setGender(event.target.value)}
             value={gender}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           >
             <option></option>
             <option>Men's</option>
@@ -74,6 +79,11 @@ function CreateBrand() {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(event) => setLogo(event.target.value)}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           />
           <small id="emailHelp" className="form-text text-muted">
             Please paste link to brand jpeg/png
@@ -88,6 +98,11 @@ function CreateBrand() {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(event) => setBrand_Name(event.target.value)}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           />
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>
@@ -100,6 +115,11 @@ function CreateBrand() {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(event) => setCEO(event.target.value)}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           />
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>
@@ -110,6 +130,11 @@ function CreateBrand() {
             class="form-control"
             id="exampleFormControlSelect1"
             onChange={(event) => setType(event.target.value)}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           >
             <option></option>
             <option>High Fashion/Luxury</option>
@@ -126,6 +151,11 @@ function CreateBrand() {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(event) => setPrice_Point(event.target.value)}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           />
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>
@@ -138,6 +168,11 @@ function CreateBrand() {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(event) => setLink(event.target.value)}
+            style={{
+              backgroundColor: "black",
+              color: "#bc925a",
+              borderColor: "#bc925a",
+            }}
           />
           <small id="emailHelp" className="form-text text-muted">
             Insert link to brand website
@@ -158,6 +193,11 @@ function CreateBrand() {
           type="button"
           className="btn btn-primary"
           onClick={() => submitToApi()}
+          style={{
+            backgroundColor: "black",
+            color: "#bc925a",
+            borderColor: "#bc925a",
+          }}
         >
           Submit
         </button>
