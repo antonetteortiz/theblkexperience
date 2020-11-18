@@ -20,7 +20,7 @@ function ShopWomen(props) {
         alert("Brand has been deleted!");
         console.log(response);
         // history.push(`/women`)
-        window.location.href = `https://antonetteortiz.github.io/women`;
+        // window.location.href = `https://antonetteortiz.github.io/women`;
       });
   };
 
@@ -45,10 +45,12 @@ function ShopWomen(props) {
             >
               Update
             </Link>
-            
+
+
             <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>
+
           </div>
         </div>
       </div>

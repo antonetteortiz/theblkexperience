@@ -21,7 +21,9 @@ function ShopMen(props) {
         alert("Brand has been deleted!");
         console.log(response);
         // history.push("/men")
-        window.location.href = `https://antonetteortiz.github.io/men`;
+        // window.location.href = `https://antonetteortiz.github.io/men`;
+
+        // Create function called ParentRerender and the function as a prop from app.js to refresh fetch call.
       });
   };
 
@@ -46,10 +48,12 @@ function ShopMen(props) {
             >
               Update
             </Link>
-            
+
+
             <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>
+
           </div>
         </div>
       </div>
