@@ -21,7 +21,9 @@ function ShopMen(props) {
         alert("Brand has been deleted!");
         console.log(response);
         // history.push("/men")
-        window.location.href = `http://localhost:3000/men`;
+        // window.location.href = `https://antonetteortiz.github.io/men`;
+
+        // Create function called ParentRerender and the function as a prop from app.js to refresh fetch call.
       });
   };
 
@@ -29,7 +31,7 @@ function ShopMen(props) {
   let BrandList = props.menBrands.map((brand, i) => {
     let encodedbrand_name = encodeURI(brand.brand_name);
 
-    console.log(`/men/brand/${encodedbrand_name}`)
+    console.log(`/men/brand/${encodedbrand_name}`);
     return (
       <div className="col mb-4">
         <div className="card" style={{ width: "auto", margin: "30px" }} key={i}>
@@ -41,16 +43,17 @@ function ShopMen(props) {
             />
           </Link>
 
-          <div className="card-footer">
-            <a
-              className="card-link"
-              href={`/updatebrand/menswear/${encodeURI(brand.brand_name)}`}
+          <div className="card-footer" style={{backgroundColor: "#020202"}}>
+            <Link to ={`/updatebrand/menswear/${encodeURI(brand.brand_name)}`}
             >
               Update
-            </a>
+            </Link>
+
+
             <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
             </a>
+
           </div>
         </div>
       </div>

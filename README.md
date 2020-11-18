@@ -1,4 +1,4 @@
-# groupproject8
+# BLK EXPERIENCE
 BLACK LIVES MATTER ✊🏾 ✊🏾 ✊🏾
 
 
@@ -6,9 +6,13 @@ BLACK LIVES MATTER ✊🏾 ✊🏾 ✊🏾
 
 Welcome to the Black Excellence/ Black Fashion Project!
 
+<<<<<<< HEAD
 Here, (http://localhost:3000/) the user enters the landing page where the user can chose between shopping the women's or men's collection.  
+=======
+Here, (https://antonetteortiz.github.io/blk-experience/) the user enters the landing page where the user can chose between shopping the womens or mens collection.  
+>>>>>>> b96cd0825840338d561b504c9e628b5299783a13
 
-When the user clicks on 'Shop Men's', the user will be redirected to the men's fashion collection page (http://localhost:3000/men). When the user clicks on the 'Shop Women's, the user will be redirected to the women's fashion collection page (http://localhost:3000/women). 
+When the user clicks on 'Shop Men's', the user will be redirected to the men's fashion collection page https://antonetteortiz.github.io/blk-experience/men). When the user clicks on the 'Shop Women's, the user will be redirected to the women's fashion collection page (https://antonetteortiz.github.io/blk-experience/women). 
 
 At the top of the page is the nav bar labeled 'BLK Experience'. Here, the user can navigate between four different buttons: 'Home', 'Women's', 'Men's', and 'Create Brand'. The user can go back to the landing page by clicking 'Home', can be directed to either the men's or women's collections, or the user can make their own brand (The user can do this by clicking 'Create Brand'and filling out the provided form to create a brand).
 
