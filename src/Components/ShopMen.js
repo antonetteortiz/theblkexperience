@@ -21,7 +21,7 @@ function ShopMen(props) {
         alert("Brand has been deleted!");
         console.log(response);
         // history.push("/men")
-        window.location.href = `http://localhost:3000/men`;
+        window.location.href = `https://antonetteortiz.github.io/men`;
       });
   };
 

@@ -59,7 +59,7 @@ function UpdateBrands() {
       .then(function (response) {
         if (response.status == 200) {
           // change when deploying
-          window.location.href = `http://localhost:3000/${
+          window.location.href = `https://antonetteortiz.github.io/${
             params.gender == "menswear" ? "men" : "women"
           }`;
         }

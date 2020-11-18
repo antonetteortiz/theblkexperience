@@ -20,7 +20,7 @@ function ShopWomen(props) {
         alert("Brand has been deleted!");
         console.log(response);
         // history.push("/women")
-        window.location.href = `http://localhost:3000/women`;
+        window.location.href = `https://antonetteortiz.github.io/women`;
       });
   };
 
