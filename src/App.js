@@ -62,7 +62,7 @@ function App() {
     <Switch>
       <Route
         exact
-        path="/"
+        path="/blk-experience"
         render={() => {
           return <HomePage />;
         }}
