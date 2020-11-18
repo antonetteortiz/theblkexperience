@@ -111,8 +111,9 @@ function CreateBrand() {
             id="exampleFormControlSelect1"
             onChange={(event) => setType(event.target.value)}
           >
-            <option>4</option>
-            <option>5</option>
+            <option></option>
+            <option>High Fashion/Luxury</option>
+            <option>Streetwear</option>
           </select>
           <small id="emailHelp" className="form-text text-muted"></small>
         </div>

@@ -7,7 +7,10 @@ function Navbar() {
       <div className="header">
         <h4>BLACK LIVES MATTER</h4>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className="navbar navbar-expand-lg navbar-light "
+        style={{ backgroundColor: "#bc925a"}}
+      >
         <a className="navbar-brand" href="#">
           BLACK Experience
         </a>

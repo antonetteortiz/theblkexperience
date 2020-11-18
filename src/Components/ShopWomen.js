@@ -45,7 +45,7 @@ function ShopWomen(props) {
             <h5 className="card-title">{shopwomen.brand_name}</h5>
             <p className="card-text">{shopwomen.CEO}</p>
           </div> */}
-          <div className="storybook-Delete">
+          <div className="storybook-Delete" style={{backgroundColor: "black"}}>
             <a href={`/updatebrand/${encodeURI(brand.brand_name)}`}>
               <Update className="storybook-Update" label="Update" />
             </a>

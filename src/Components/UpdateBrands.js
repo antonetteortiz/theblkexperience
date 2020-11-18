@@ -11,17 +11,15 @@ function UpdateBrands() {
   const [price_point, setPrice_Point] = useState();
   const [link, setLink] = useState();
   const params = useParams();
-  
+
   useEffect(() => {
-    let apiLink;  
+    let apiLink;
     if (params.gender === "menswear") {
-      apiLink =
-        `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
+      apiLink = `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
     } else {
-      apiLink =
-        `https://sd-womens-fashion.herokuapp.com/WomenFashion/${params.brand_name}`;
+      apiLink = `https://sd-womens-fashion.herokuapp.com/WomenFashion/${params.brand_name}`;
     }
-  
+
     fetch(apiLink)
       .then((data) => {
         let test = data.json();
@@ -50,21 +48,20 @@ function UpdateBrands() {
     }
     console.log("update", params.artistName);
     axios
-      .put( apiLink,
-        {
-          logo,
-          brand_name,
-          CEO,
-          type,
-          price_point,
-          link,
-        }
-      )
+      .put(apiLink, {
+        logo,
+        brand_name,
+        CEO,
+        type,
+        price_point,
+        link,
+      })
       .then(function (response) {
-      
         if (response.status == 200) {
           // change when deploying
-          window.location.href = `http://localhost:3000/${ params.gender == "menswear" ? 'men' : 'women'}`;
+          window.location.href = `http://localhost:3000/${
+            params.gender == "menswear" ? "men" : "women"
+          }`;
         }
         // alert("Thanks for updating to our libary.");
         console.log(response);

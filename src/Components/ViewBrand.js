@@ -7,7 +7,7 @@ function ViewBrand() {
   const [brand, setBrand] = useState();
   const params = useParams();
   useEffect(() => {
-      console.log(`${params.gender}`)
+    console.log(`${params.gender}`);
     let apiLink;
     if (params.gender == "men") {
       apiLink = `https://sd-womens-fashion.herokuapp.com/menswear/${params.brand_name}`;
@@ -38,19 +38,16 @@ function ViewBrand() {
     let products = categoryObject.products;
 
     let ProductList = products.map((product, a) => {
-
-        // Each product as a card
+      // Each product as a card
       return (
         <div>
-          
-            <div class="card" style={{ width: "18rem" }} key={i}>
-              <img src={product.image_url} class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">{product.name}</h5>
-                <p class="card-text">{product.details}</p>
-              </div>
+          <div class="card" style={{ width: "18rem" }} key={i}>
+            <img src={product.image_url} class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{product.name}</h5>
+              <p class="card-text">{product.details}</p>
             </div>
-          
+          </div>
         </div>
       );
     });
@@ -62,7 +59,6 @@ function ViewBrand() {
         <div className="card-deck">{ProductList}</div>
       </div>
     );
-
   });
 
   return (

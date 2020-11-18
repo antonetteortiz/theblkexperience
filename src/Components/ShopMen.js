@@ -5,6 +5,9 @@ import axios from "axios";
 import { Button } from "../stories/Button";
 import { Subscribe } from "../stories/Subscribe";
 import Forms from "../stories/Forms";
+import { Delete } from "../stories/Delete";
+import { Update } from "../stories/Update";
+
 
 function ShopMen(props) {
   const history = useHistory();
@@ -41,8 +44,19 @@ function ShopMen(props) {
             />
           </Link>
 
-          <div className="card-footer">
-            <a
+          <div className="card-footer" style= {{backgroundColor: "black"}}>
+            <div className="storybook-update">
+              <a href={`/updatebrand/${encodeURI(brand.brand_name)}`}>
+                <Update className="storybook-Update" label="Update" />
+              </a>
+              <Delete
+                className="storybook-delete"
+                onClick={() => remove(brand.brand_name)}
+                label="Delete"
+              />
+            </div>
+
+            {/* <a
               className="card-link"
               href={`/updatebrand/menswear/${encodeURI(brand.brand_name)}`}
             >
@@ -50,7 +64,7 @@ function ShopMen(props) {
             </a>
             <a className="card-link" onClick={() => remove(brand.brand_name)}>
               Delete
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
