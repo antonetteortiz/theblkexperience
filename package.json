@@ -21,7 +21,7 @@
     "storybook": "^6.0.28",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "http://antonetteortiz.github.io/blk-experience/",
+  "homepage": "http://antonetteortiz.github.io/blk-experience",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
