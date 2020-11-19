@@ -6,11 +6,7 @@ BLACK LIVES MATTER ✊🏾 ✊🏾 ✊🏾
 
 Welcome to the Black Excellence/ Black Fashion Project!
 
-<<<<<<< HEAD
-Here, (http://localhost:3000/) the user enters the landing page where the user can chose between shopping the women's or men's collection.  
-=======
 Here, (https://antonetteortiz.github.io/blk-experience/) the user enters the landing page where the user can chose between shopping the womens or mens collection.  
->>>>>>> b96cd0825840338d561b504c9e628b5299783a13
 
 When the user clicks on 'Shop Men's', the user will be redirected to the men's fashion collection page https://antonetteortiz.github.io/blk-experience/men). When the user clicks on the 'Shop Women's, the user will be redirected to the women's fashion collection page (https://antonetteortiz.github.io/blk-experience/women). 
 
