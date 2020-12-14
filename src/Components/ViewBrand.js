@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Navbar from "./Navbar";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import "./ViewBrand.css"
 
 function ViewBrand() {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
-import { useParams, Redirect, useHistory } from "react-router-dom";
+import { useParams} from "react-router-dom";
 
 function UpdateBrands() {
   const [logo, setLogo] = useState();
